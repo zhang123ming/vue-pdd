@@ -109,13 +109,22 @@ Vue.filter('FilterPhone', function(phone) {
 
     })
     /**
-     * 
-     * 
-     *  */
-    /**
-     * 
+     * 二维码生成器
      * 
      *  */
+
+import QRCode from 'qrcodejs2'
+Vue.prototype.$qrCode = QRCode;
+
+
+/**
+ * Toast
+ * 
+ *  */
+import toastRegistry from './components/Toast/index'
+
+// 这里也可以直接执行 toastRegistry()
+Vue.use(toastRegistry)
     /**
      * 
      * 

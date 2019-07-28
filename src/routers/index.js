@@ -46,6 +46,8 @@ import Login from './../components/Login/Login.vue'
 // me
 import Medetail from './../components/Me/Medetail.vue'
 import Text from './../components/Me/Text.vue'
+import QrCode from './../components/Me/QrCode.vue'
+import LogoQrCode from './../components/Me/LogoQrCode.vue'
 export default new VueRouter({
     mode: 'history',
     routes: [{
@@ -78,6 +80,8 @@ export default new VueRouter({
         { path: '/medetail', component: Medetail },
         { path: '/text', component: Text },
         { path: '/tab', component: Tab },
+        { path: '/qrcode', component: QrCode },
+        { path: '/logoCode', component: LogoQrCode },
         { path: '/', redirect: '/home' }
 
     ]

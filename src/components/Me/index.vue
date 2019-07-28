@@ -76,13 +76,13 @@
       <!-- 底部 -->
 
       <ul>
-        <li>
+        <router-link to="/logoCode" tag="li">
           <img src="./../../../static/img/foot/guoyuan.svg" alt />
-          <span>多多果园</span>
-        </li>
-        <li>
+          <span>logoCode</span>
+        </router-link>
+        <li @click="showToast">
           <img src="./../../../static/img/foot/kanjiamianfeina.svg" alt />
-          <span>砍价免费拿</span>
+          <span>Toast</span>
         </li>
         <li>
           <img src="./../../../static/img/foot/yifenchoujiangicon.svg" alt />
@@ -100,10 +100,10 @@
           <img src="./../../../static/img/foot/dizhi.svg" alt />
           <span>收货地址</span>
         </li>
-        <li>
+        <router-link to="/qrcode" tag="li">
           <img src="./../../../static/img/foot/wodepingjia.svg" alt />
-          <span>我的评价</span>
-        </li>
+          <span>二维码</span>
+        </router-link>
         <li @click="handelRouterLogin">
           <img src="./../../../static/img/foot/kefu.svg" alt />
           <span>官方客服</span>
@@ -151,6 +151,9 @@ export default {
     this.getuserInfo();
   },
   methods: {
+     showToast () {
+        this.$toast('加载失败')
+      },
     // 路由跳转
     detail() {
       this.$router.replace("/medetail");
